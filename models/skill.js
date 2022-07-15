@@ -5,7 +5,7 @@ const todos = [
   ];
   
   module.exports = {
-    getAll,
+    getAllThat,
     getOne,
     create,
     delete: deleteOne,
