@@ -1,5 +1,5 @@
 const skills = [
-    {id: 125223, skill: 'HTML', done: false},
+    {id: 125223, skill: 'HTML', done: true},
     {id: 127904, skill: 'CSS', done: false},
     {id: 139608, skill: 'JavaScript', done: false}
   ];
