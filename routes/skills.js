@@ -1,20 +1,20 @@
 var express = require('express');
 var router = express.Router();
 
-const todosCtrl = require('../controllers/todos');
+const skillsCtrl = require('../controllers/skills');
 
 
-router.get('/', todosCtrl.index);
+router.get('/', skillsCtrl.index);
 
-router.get('/new', todosCtrl.new);
+router.get('/new', skillsCtrl.new);
 
-router.get('/:id', todosCtrl.show);
+router.get('/:id', skillsCtrl.show);
 
-router.get('/:id/edit', todosCtrl.edit); 
+router.get('/:id/edit', skillsCtrl.edit); 
 
-router.post('/', todosCtrl.create);
+router.post('/', skillsCtrl.create);
 
-router.delete('/:id', todosCtrl.delete);
+router.delete('/:id', skillsCtrl.delete);
 
 
 

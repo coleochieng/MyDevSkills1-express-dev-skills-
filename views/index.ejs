@@ -1,21 +1,24 @@
 
 
-<h1>My Dev Skills/h1>
-<ul>
-  <% skills.forEach(function(s) { %>
-    <li>
-      <form action="/skills/<%= s.id %>?_method=DELETE"
-        method="POST"
-        class="delete-form"
-      >
-        <button type="submit">X</button>
-      </form>
-      <a href="/skills/<%= t.id %>"><%= t.skill %></a>
-      - 
-      <%= s.done ? 'done' : 'not done' %>
-    </li>
-    <% }); %>
-  </ul>
-  <a href="/skills/new">Add Skill</a>
-  
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
 
