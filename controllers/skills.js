@@ -6,20 +6,9 @@ module.exports = {
   new: newSkill,
   create,
   delete: deleteSkill,
-  edit,
-  update
 };
 
-function update(req, res) {
-  req.body.done = req.body.done;
-  Skill.update(req.params.id, req.body);
-  res.redirect(`/skill/${req.params.id}`);
-}
 
-function edit(req, res) {
-  const skill = Skill.getOne(req.params.id);
-  res.render('skills/edit', { skill });
-}
 
 function deleteSkill(req, res) {
   Skill.delete(req.params.id);
@@ -33,7 +22,6 @@ function create(req, res) {
 }
 
 function newSkill(req, res) {
-  // render the new.ejs that contains a form
   res.render('skills/new');
 }
 
