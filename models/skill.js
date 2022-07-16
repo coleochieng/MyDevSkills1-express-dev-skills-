@@ -1,42 +1,40 @@
-const todos = [
-    {id: 125223, todo: 'HTML', done: true},
+const skills = [
+    {id: 125223, todo: 'HTML', done: false},
     {id: 127904, todo: 'CSS', done: false},
     {id: 139608, todo: 'JavaScript', done: false}
   ];
   
   module.exports = {
-    getAllThat,
+    getAll,
     getOne,
     create,
     delete: deleteOne,
     update
   };
   
-  function update(id, updatedTodo) {
+  function update(id, updatedSkill) {
     id = parseInt(id);
-    const todo = todos.find((todo) => todo.id === id);
-    // Merge the updatedTodo's properties into the 
-    // existing todo object's properties
-    Object.assign(todo, updatedTodo);
+    const skill = skills.find((skill) => skill.id === id);
+    Object.assign(skill, updatedSkill);
   }
   
   function deleteOne(id) {
     id = parseInt(id);
-    const todoIdx = todos.findIndex((t) => t.id === id);
-    todos.splice(todoIdx, 1);
+    const skillIdx = skills.findIndex((t) => t.id === id);
+    skills.splice(skillIdx, 1);
   }
   
-  function create(todo) {
-    todo.id = Date.now() % 1000000;
-    todo.done = false;
-    todos.push(todo);
+  function create(skill) {
+    skill.id = Date.now() % 1000000;
+    skill.done = false;
+    skills.push(skill);
   }
   
   function getOne(id) {
     id = parseInt(id);
-    return todos.find((todo) => todo.id === id);
+    return skills.find((skill) => skill.id === id);
   }
   
   function getAll() {
-    return todos;
-}
+    return skills;
+  }
